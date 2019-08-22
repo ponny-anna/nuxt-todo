@@ -1,6 +1,14 @@
 # nuxt-todo
 
-> My bedazzling Nuxt.js project
+This project is for learning.
+
+[__Function__]
+* Authentication
+* CRUD
+  
+[__Backend__]
+* Firebase
+
 
 ## Build Setup
 
