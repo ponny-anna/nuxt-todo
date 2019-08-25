@@ -8,7 +8,7 @@
       </template>
       <template slot="start">
         <b-navbar-item href="/">Home</b-navbar-item>
-        <b-navbar-item href="#" v-if="login_user">Todo</b-navbar-item>
+        <b-navbar-item href="/todos" v-if="login_user">Todo</b-navbar-item>
       </template>
 
       <template slot="end">
@@ -46,11 +46,11 @@ export default {
       if (user) {
         this.setLoginUser(user)
         if (this.$router.currentRoute.name === 'signup') {
-          this.$router.push({ name: 'todo' })
+          this.$router.push({ name: 'todos' })
         }
       } else {
         this.deleteLoginUser()
-        if (this.$router.currentRoute.name === 'todo') {
+        if (this.$router.currentRoute.name === 'todos') {
           this.$router.push({ name: 'signup' })
         }
       }

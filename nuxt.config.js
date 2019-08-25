@@ -1,3 +1,5 @@
+const webpack = require('webpack')
+
 export default {
   mode: 'spa',
   head: {
@@ -22,13 +24,18 @@ export default {
   ],
   modules: [
     'nuxt-buefy',
-    '@nuxtjs/axios',
     '@nuxtjs/dotenv'
   ],
   axios: {
   },
   build: {
     extend (config, ctx) {
-    }
+    },
+    
+    plugins: [
+      new webpack.ProvidePlugin({
+        '_': 'lodash'
+      })
+    ]
   }
 }
